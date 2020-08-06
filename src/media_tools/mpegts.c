@@ -4347,7 +4347,7 @@ static GF_Err gf_dvb_tune(GF_Tuner *tuner, const char *url, const char *chan_pat
 			if (line[0]=='\r') continue;
 			if (line[0]=='\n') continue;
 
-			strncpy(chan_name_t, line, index(line, ':')-line);
+			strncpy(chan_name_t, line, strchr(line, ':')-line);
 			if (strncmp(chan_name,chan_name_t,strlen(chan_name))==0) {
 				sscanf(strstr(line,":"), chan_conf, freq_str, inv, bw, lcr, cr, mod, transm, gi, hier, apid_str, vpid_str);
 				tuner->freq = (uint32_t) atoi(freq_str);
