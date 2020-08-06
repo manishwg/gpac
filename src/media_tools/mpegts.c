@@ -4316,7 +4316,7 @@ static GF_Err gf_m2ts_demuxer_setup_live(GF_M2TS_Demuxer *ts, char *url)
 char *qfx_index (char *s, int c){
 	int i;
 	for(i=0;i<255;i++)
-		if s[i]==c
+		if(s[i]==c)
 			return &s[i];
 	return NULL;
 }
