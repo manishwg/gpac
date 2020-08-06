@@ -4318,7 +4318,7 @@ char *qfx_index (char *s, int c){
 	for(i=0;i<255;i++)
 		if s[i]==c
 			return &s[i];
-	return NULL
+	return NULL;
 }
 
 static GF_Err gf_dvb_tune(GF_Tuner *tuner, const char *url, const char *chan_path) {
